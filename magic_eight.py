@@ -1,12 +1,14 @@
 import sys
 import random
 # Ask user to input a question
+# Return: question - string, inout of the user
 def ask_question():
     question = input("What is your question? ")
     return question
 
 # Check wether the input is a question
 # param: question - string, input of the user
+# Return: True - input is a question, False - inout is not a question
 def check_question(question):
     if question.endswith("?"):
         return True
@@ -14,6 +16,8 @@ def check_question(question):
         print("I’m sorry, I can only answer questions.")
         return False
 
+# 20 Possible random answers
+# Return: No
 def add_questions():
 
     answers = random.randint(1,20)
@@ -79,7 +83,7 @@ def add_questions():
         print("Very doubtful.")
 
 
-	# Program start
+# Program start
 def start():
     while True:
         question = ask_question()
@@ -87,4 +91,5 @@ def start():
             break
     add_questions()
 
+# Execute
 start()
