@@ -45,6 +45,8 @@ def add_questions():
 
     elif answers == 8:
         print "My sources say no"
+    elif answers == 9:
+        print "NO"
 
 	# Program start
 def start():
